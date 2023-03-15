@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+
+/* font-family: 'Raleway', sans-serif; */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --heading: 'Raleway', sans-serif;
+    --main-color: #537FE7;
+    --black: #000;
+    --light-color: #C0EEF2;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #fff;
+}
+
+body .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* global styling */
+
+img{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+    color: var(--black);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+hr{
+    width: 95vw;
+    margin: 0 auto;
+}
+
+/* header */
+
+.web-name span{
+    color: var(--main-color);
+}
+
+.top-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: #252525;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.top-head .fa{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ------- JS related ------- */
+
+.times-btn{
+    display: none;
+}
+
+.nav-bar{
+    background: #333;
+    height: 0;
+    overflow: hidden;
+}
+
+.show-nav{
+    height: auto;
+}
+
+/*---------------------------*/
+
+.nav-bar ul li{
+    text-align: center;
+    display: block;
+    padding: 35px 10px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-bar ul li:hover{
+    background: #252525;
+}
+
+.nav-bar ul li a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-bar ul li a:hover{
+    text-decoration: underline;
+}
+
+.nav-bar .btn_log_in{
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 8px 28px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: 0.1s all;
+}
+
+.nav-bar .btn_log_in:hover{
+    text-decoration: none;
+    background-color: white;
+    color: var(--black);
+}
+
+/* social icons */
+
+.social-icons{
+    display: none;
+}
+
+/*login section*/
+
+.wrapper{
+    width: 55%;
+}
+
+.wrapper .form-box{
+    width: 50%;
+    padding: 40px;
+}
+
+.form-box h2{
+    font-size: 2em;
+}
+
+.form-box p{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 240px;
+    border-bottom: 1px solid var(--black);
+}
+
+.form-box a{
+    color: #DF2E38;
+    font-weight: 500;
+    font-size: .9em;
+}
+
+.form-box .input-box{
+    margin-top: 10px;
+}
+
+.input-box label{
+    color: #B2B2B2;
+    position: absolute;
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+.input-box input{
+    width: 150%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #B2B2B2;
+    border-radius: 1px;
+    margin: 20px 0;
+    padding: 0 10px 0 10px;
+}
+
+.btn{
+    width: 150%;
+    margin: 15px 0;
+    height: 30px;
+    background: #252525;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: .7em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+}
+
+.remember-forgot{
+    width: 100%;
+    font-size: .8em;
+    font-weight: 500;
+    display: inline-flex;
+}
+
+.remember-forgot a{
+    color: #DF2E38;
+}
+
+/* footer */
+
+footer{
+    background: #252525;
+    color: #f3f3f3;
+    padding: 30px;
+}
+
+footer h2{
+    padding: 10px 0;
+}
+
+footer p{
+    padding: 10px 0;
+    line-height: 1.3;
+}
+
+.footer-left, .footer-right{
+    margin: 0 20px;
+}
+
+footer > p{
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.footer-right i{
+    font-size: 1.8rem;
+    color: #808080;
+}
+
+.footer-right input{
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #808080;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.footer-right div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 200px;
+    padding: 10px 0;
+    border-bottom: 1.6px solid #808080;
+}
+
+@media(max-width: 460px){
+    .hot-topic-content h2{
+        font-size: 16px;
+    }
+
+    .main-container-right article{
+        display: block;
+    }
+
+    .main-container-right article img{
+        display: none;
+    }
+}
+
+@media(max-width: 500px){
+    .main-container-right article{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .main-container-right article h4{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        align-self: flex-start;
+    }
+
+    .main-container-right article img{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .main-container-right article div{
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+}
+
+@media(min-width: 768px){
+    .banner-sub-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-bottom-left{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 800px){
+    /* nav */
+    .ham-btn, .times-btn{
+        display: none !important;
+    }
+
+    .nav-container{
+        display: flex;
+        background: #252525;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .top-head{
+        flex: 0 0 15%;
+    }
+
+    .nav-bar{
+        flex: 1 0 auto;
+        height: 100%;
+        background: transparent;
+    }
+
+    .nav-bar nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-bar nav ul li{
+        padding-right: 30px;
+    }
+
+    .nav-bar nav ul li:hover{
+        background: none;
+    }
+
+    /* social icons */
+
+    .social-icons{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .social-icons .fa{
+        color: #fff;
+        font-size: 2rem;
+    }
+    .social-icons ul{
+        display: flex;
+        padding: 0 70px;
+    }
+    .social-icons ul li{
+        padding: 15px;
+    }
+
+    .footer-container{
+        display: flex;
+    }
+
+    .footer-right, .footer-left{
+        flex: 1;
+    }
+}
+
+@media(min-width: 992px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1080px){
+    .banner{
+        grid-template-columns: 1fr 2fr;
+    }
+}
